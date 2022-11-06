@@ -35,11 +35,11 @@ export default function QuestionCard(props) {
     return (
         <div>
             <Card className='card--question'>
-            <Button onClick={cancel} variant='danger'>Cancel</Button>
-            <h1>{content[index].esp} <i onClick={playSound} className="fa-solid fa-volume-high"></i></h1>
-            <p>{content[index].eng}</p>
-            <Button onClick={nextWord}>Next</Button>
-        </Card>
+                <p onClick={cancel} className='close'>Close</p>
+                <h1 className='word--esp'>{content[index].esp} <i onClick={playSound} className="fa-solid fa-volume-high"></i></h1>
+                <p className='word--eng'>{content[index].eng}</p>
+                <Button onClick={nextWord} className='btn'>Next</Button>
+            </Card>
         </div>
     )
 }

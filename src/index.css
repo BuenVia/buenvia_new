@@ -35,8 +35,25 @@ body {
   align-items: center;
 }
 
+.close {
+  cursor: pointer;
+  width: fit-content;
+}
+
 .card--question {
   margin: 2rem 0;
   padding: 1rem;
   width: 700px;
+}
+
+.word--esp {
+  font-size: 64px;
+}
+
+.word--eng {
+  font-size: 32px;
+}
+
+.btn {
+  width: 100px;
 }
