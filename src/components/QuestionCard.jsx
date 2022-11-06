@@ -1,18 +1,24 @@
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import Form from 'react-bootstrap/Form'
 
-export default function QuestionCard() {
+export default function QuestionCard(props) {
 
-    const [isActive, setIsActive] = useState(false)
-
-    function handleClick() {
-        setIsActive(prevVal => !prevVal)
+    function cancel() {
+        return props.active()
     }
-
 
     return (
         <div>
-            {isActive ? <Button onClick={handleClick} variant='danger'>Cancel</Button> : <Button onClick={handleClick} variant='primary'>Start</Button>}
+            <Card className='card--question'>
+            <Button onClick={cancel} variant='danger'>Cancel</Button>
+            <Form>
+                <Form.Label>Spanish Word</Form.Label>
+                <Form.Control type="email" placeholder="Enter translation" />
+                <Button variant='success'>Submit</Button>
+            </Form>
+        </Card>
         </div>
     )
 }
