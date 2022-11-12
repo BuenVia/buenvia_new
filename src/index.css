@@ -45,19 +45,34 @@ body {
   color: var(--text-clr);
 }
 
-.bg {
-  background-color: red;
-}
-
 .close {
   cursor: pointer;
   width: fit-content;
 }
 
-.btn {
-  width: 100px;
-}
 
 .intro-card {
   margin-top: 3rem;
+}
+
+.learn-button-card {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  padding: .5rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.btn {
+  margin-left: auto;
+}
+
+.btn-learn {
+  margin-left: auto;
+  background-color: var(--header);
+  padding: .25rem;
+  border: none;
+  border-radius: .25rem;
 }

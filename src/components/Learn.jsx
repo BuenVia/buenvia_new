@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button'
+import LearnButton from './LearnButton'
 
 export default function Learn(props) {
 
@@ -14,12 +15,18 @@ export default function Learn(props) {
     }, [])
 
     return(
-        <div>
+        <div
+        className='p-5'>
             <Button onClick={props.section}>Home</Button>
-           <h3>Learn</h3>
-           {vocabs.map((vocab) => {
-            return (<div><Button>{vocab.name}</Button></div>)
-           })}
+           <div className='card'>
+                <h3>Learn</h3>
+                <div className='mt-4'>
+                {vocabs.map((vocab) => {
+                return (<LearnButton name={vocab.name} />)
+               })}
+
+           </div>
+           </div>
         </div>
     )
 }
