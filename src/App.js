@@ -8,15 +8,15 @@ import { Container } from "react-bootstrap"
 
 export default function App() {
 
-  const [isActive, setIsActive] = useState(<Home activity={handleClick} /> )
+  const [isActive, setIsActive] = useState(<Home section={handleClick} /> )
 
   function handleClick(e) {
-    if(e.target.value === 'learn') {
-      return setIsActive(<Learn activity={handleClick} />)
-    } else if(e.target.value === 'practice') {
-      return setIsActive(<Practice activity={handleClick} />)
+    if(e.target.value === 'Learn') {
+      return setIsActive(<Learn section={handleClick} />)
+    } else if(e.target.value === 'Practice') {
+      return setIsActive(<Practice section={handleClick} />)
     } else {
-      return setIsActive(<Home activity={handleClick} />)
+      return setIsActive(<Home section={handleClick} />)
     }
   }
 

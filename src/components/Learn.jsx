@@ -15,7 +15,7 @@ export default function Learn(props) {
 
     return(
         <div>
-            <Button onClick={props.activity}>Home</Button>
+            <Button onClick={props.section}>Home</Button>
            <h3>Learn</h3>
            {vocabs.map((vocab) => {
             return (<div><Button>{vocab.name}</Button></div>)

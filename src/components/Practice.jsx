@@ -4,7 +4,7 @@ export default function Practice(props) {
     return (
         <div>
             <p>Practice</p>
-            <Button onClick={props.activity}>Home</Button>
+            <Button onClick={props.section}>Home</Button>
         </div>
     )
 }

@@ -1,3 +1,9 @@
+:root {
+  --header: rgb(84, 36, 146);
+  --bkg-clr: rgb(37, 37, 37);
+  --text-clr: rgb(240, 240, 240);
+}
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -6,19 +12,18 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-
 }
 
 .page {
   min-height: 100vh;
-  background-color: rgb(228, 228, 228);
+  background-color: var(--bkg-clr);
 }
 
 .header {
   padding: 2rem;
   text-align: center;
-  background-color: rgb(77, 192, 192);
-  color: rgb(228, 228, 228);
+  background-color: var(--header);
+  color: var(--text-clr);
 }
 
 .header--title {
@@ -28,11 +33,20 @@ body {
 
 .main {
   width: 800px;
-  background-color: #aaa;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  padding: 1rem;
+  background-color: var(--bkg-clr)!important;
+  color: var(--text-clr);
+}
+
+.bg {
+  background-color: red;
 }
 
 .close {
@@ -40,20 +54,10 @@ body {
   width: fit-content;
 }
 
-.card--question {
-  margin: 2rem 0;
-  padding: 1rem;
-  width: 700px;
-}
-
-.word--esp {
-  font-size: 64px;
-}
-
-.word--eng {
-  font-size: 32px;
-}
-
 .btn {
   width: 100px;
+}
+
+.intro-card {
+  margin-top: 3rem;
 }
