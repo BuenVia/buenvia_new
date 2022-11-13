@@ -10,6 +10,7 @@ export default function App() {
 
   const [isActive, setIsActive] = useState(<Home section={handleClick} /> )
 
+  // Show either home page, learn page or practive page.
   function handleClick(e) {
     if(e.target.value === 'Learn') {
       return setIsActive(<Learn section={handleClick} />)
@@ -25,6 +26,7 @@ export default function App() {
       <Header />
       <Container className="main">
 
+        {/*shows Home / Learn / Practice */}
         {isActive}
 
       </Container>  

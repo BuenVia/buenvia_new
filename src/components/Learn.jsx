@@ -4,9 +4,10 @@ import LearnButton from './LearnButton'
 
 export default function Learn(props) {
 
+    // Displays available topics
     const [vocabs, setVocabs] = useState([])
 
-    const url = 'http://localhost:9000/api/topics/count'
+    const url = 'https://buenvia.herokuapp.com/api/topics/count'
 
     useEffect(() => {
         fetch(url)
@@ -14,19 +15,34 @@ export default function Learn(props) {
         .then(json => setVocabs(json))
     }, [])
 
+    // Sets new topic
+    const [topic, setTopic] = useState('choose')
+
+    function chosenTopic() {
+        // if (topic === 'choose') {
+        //     return (
+        //         <div className='card'>
+        //             <h3>Learn</h3>
+        //             <div className='mt-4'>
+        //                 {vocabs.map((vocab) => {
+        //                 return (<LearnButton topicHandle={topicHandle} name={vocab.name} />)
+        //                 })}
+        //             </div>
+        //         </div>
+        //     )
+        // }
+        console.log(true)
+    }
+
+    function topicHandle(topic) {
+        setTopic(topic)
+    }
+
     return(
         <div
         className='p-5'>
             <Button onClick={props.section}>Home</Button>
-           <div className='card'>
-                <h3>Learn</h3>
-                <div className='mt-4'>
-                {vocabs.map((vocab) => {
-                return (<LearnButton name={vocab.name} />)
-               })}
-
-           </div>
-           </div>
+            {chosenTopic}
         </div>
     )
 }

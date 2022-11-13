@@ -3,7 +3,7 @@ import ActivityCard from "./ActivityCard"
 
 export default function Home(props) {
 
-    const activities =[
+    const activities = [
         {
             title: 'Learn',
             content: 'Learn new Spanish vocabulary. Choose your topic and then revise the flashcards to familiarise yourself with the words.'
@@ -20,7 +20,7 @@ export default function Home(props) {
                 <IntroCard />
             </div>
             <div className='row mt-4'>
-
+                
                 {activities.map(activity => {
                     return <ActivityCard key={activities.indexOf(activity)} content={activity} section={props.section} />
                 })}
